@@ -8,6 +8,11 @@ class Maze {
     this.invertMouse = false;
   }
 
+  reset() {
+    this.mark = 0;
+    setStartMarker();
+  }
+
   generateMaze() {
     for (let i = 0; i < this.rows; i++) {
       $('.maze table').append('<tr>');
@@ -19,8 +24,6 @@ class Maze {
 
   setStartMarker() {
     $('.cell').on('click', (e) => {
-      console.log(this.mark);
-      console.log(this);
       if (this.mark === 0) {
         $(e.target).addClass('origin');
         this.mark += 1;
@@ -35,11 +38,43 @@ class Maze {
         $(e.target).addClass('destination');
         this.mark += 1;
       }
-      //this.drawBarrier();
+      this.drawBarrier();
     });
   }
 
   drawBarrier() {
+
+    // global cell mousedown operations
+    $('.cell').mousedown( (e) => {
+      e.preventDefault();
+      let c = $(e.target);
+
+      // set barrier operations
+      if (this.mark === 2) {
+        if (!c.hasClass('origin') && !c.hasClass('destination') && !c.hasClass('barrier')) {
+          this.isMouseDown = true;
+          $(e.target).toggleClass('barrier');
+        } else if (!c.hasClass('origin') && !c.hasClass('destination') && c.hasClass('barrier')) {
+          this.isMouseDown = true;
+          this.invertMouse = true;
+          $(e.target).removeClass('barrier');
+        }
+        return false;
+      }
+    });
+
+    $('.cell').mouseover( (e) => {
+      let c = $(e.target);
+      if (this.isMouseDown && !this.invertMouse) {
+        if (!c.hasClass('destination') && !c.hasClass('origin')) {
+          c.addClass('barrier');
+        }
+      } else if (this.isMouseDown && this.invertMouse) {
+        if (!c.hasClass('destination') && !c.hasClass('origin')) {
+          c.removeClass('barrier');
+        }
+      }
+    });
 
   }
 
@@ -57,39 +92,6 @@ $(document).ready( function() {
   let maze = new Maze(20, 20);
   maze.generateMaze();
   maze.setStartMarker();
-
-  // global cell mousedown operations
-  $('.cell').mousedown((e) => {
-    e.preventDefault();
-    c = $(e.target);
-
-    // set barrier operations
-    if (maze.mark === 2) {
-      if (!c.hasClass('origin') && !c.hasClass('destination') && !c.hasClass('barrier')) {
-        maze.isMouseDown = true;
-        $(e.target).toggleClass('barrier');
-      } else if (!c.hasClass('origin') && !c.hasClass('destination') && c.hasClass('barrier')) {
-        maze.isMouseDown = true;
-        maze.invertMouse = true;
-        $(e.target).removeClass('barrier');
-      }
-      return false;
-    }
-  });
-
-  $('.cell').mouseover((e) => {
-    console.log(maze.invertMouse);
-    c = $(e.target);
-    if (maze.isMouseDown && !maze.invertMouse) {
-      if (!c.hasClass('destination') && !c.hasClass('origin')) {
-        c.addClass('barrier');
-      }
-    } else if (maze.isMouseDown && maze.invertMouse) {
-      if (!c.hasClass('destination') && !c.hasClass('origin')) {
-        c.removeClass('barrier');
-      }
-    }
-  });
 
   $(document).mouseup(function() {
     maze.isMouseDown = false;
