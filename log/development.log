@@ -300,3 +300,457 @@ Completed 200 OK in 35ms (Views: 19.2ms | ActiveRecord: 2.7ms)
 >>>>>>> 871da6138640c8345e6bd90ba386ca48987327e7
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:23:23 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1168ms (Views: 1157.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2017-09-15 12:23:56 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:24:03 +1000
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 42ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:24:03 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-09-15 12:24:58 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2017-09-15 12:25:15 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/edit"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/" for 127.0.0.1 at 2017-09-15 12:26:04 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/mazes/new" for 127.0.0.1 at 2017-09-15 12:26:37 +1000
+Processing by MazesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering mazes/new.html.erb within layouts/application
+  Rendered mazes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mazes/" for 127.0.0.1 at 2017-09-15 12:29:25 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2017-09-15 12:29:41 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:33:05 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-15 12:33:07 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XOeQ1I9BFGd63jo3vu9BBu1kyXCEsTC+HcxLGL+5YaE4tqwJaAI4gFnJF39wjovYb76pgc05tJSvbtt81V/NtQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:33:07 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:33:10 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:33:12 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:33:13 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:34:08 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:34:10 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:34:16 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yklRMHfJqYsF9yZkmiTQTeqyoQkG3IapP33wcGHwycawBcdfnl9HkmbeesHrmkvLCu4JJqEmahigbNFFNLx2Sw==", "user"=>{"email"=>"mac@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mac@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2017-09-15 02:34:16.789307"], ["sign_in_count", 2], ["updated_at", "2017-09-15 02:34:16.790075"], ["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 166ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:34:16 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-15 12:34:18 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DXdwrcnNlvwGTSS1YqzaJdumno7sXh2hiTPZ7mULwvzAAnT3kSSl8/bvbgiMvWJWjIpsO1SjIVx4yNm8DusFdQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:34:18 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:34:20 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:35:06 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:35:07 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VF9OK93E4aWATHCHb6ItHn7q1If9rLjQtRg6GyJoyrVh3RwQwPnFSlOvGlHHTnpAqKEuumgKO/qMlAurvGo4zA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VF9OK93E4aWATHCHb6ItHn7q1If9rLjQtRg6GyJoyrVh3RwQwPnFSlOvGlHHTnpAqKEuumgKO/qMlAurvGo4zA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-09-15 12:35:10 +1000
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-15 12:35:18 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-15 12:35:33 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1HFFeEGMImiG1AXDHcTBbVl9s4+lvLd5M2wBPrNPjNXh8xdDXLEGh1U3bxW1KJYzjzZJsjAaNFMK4DCOLU1+rA==", "user"=>{"email"=>"maciek0704@wp.pl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maciek0704@wp.pl"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 176ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-15 12:35:46 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0+3TA210JWmtgtjBagq7lgFfnyFCzKTwgt+CKhNI1wmzeV3EIj0enVVYbWtRH2wjk6EQRCtsbn7h0+4Nk/RJQ==", "user"=>{"email"=>"maciek0704@wp.pl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maciek0704@wp.pl"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-09-15 02:35:46.675665"], ["updated_at", "2017-09-15 02:35:46.675665"], ["email", "maciek0704@wp.pl"], ["encrypted_password", "$2a$11$w3aZZRxqxc3L7ymjsroQ5.DpeXcmLJO395Sf00Yut4N3SsA9dXqmi"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "sign_in_count" = $2, "current_sign_in_at" = $3, "last_sign_in_at" = $4, "current_sign_in_ip" = $5, "last_sign_in_ip" = $6 WHERE "users"."id" = $7[0m  [["updated_at", "2017-09-15 02:35:46.684360"], ["sign_in_count", 1], ["current_sign_in_at", "2017-09-15 02:35:46.683565"], ["last_sign_in_at", "2017-09-15 02:35:46.683565"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:35:46 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-15 12:35:49 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xz4c2lTgkiTzux2AD5XleeBVzQ/z+NBo3Rb/0EeQjIXyvE7hSd22yyBYd1anebInNh43MmZeU0Lkms5g2ZJ+/A=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:35:49 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:35:50 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-09-15 12:35:52 +1000
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2017-09-15 12:35:57 +1000
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9G4RD49deaA1Cld0kocgsmfOExg9jdqPwUxyPAI7u3gEnAFsIAaD2XvKUV/6QAL2CvCPgGPhKyEpTkyYnoTMxg==", "user"=>{"email"=>"maciek0704@wp.pl"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "maciek0704@wp.pl"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "2b05b3ebf458ab5aa6df900d65b5273656c07a9dd8e21892c468400062cc4f4a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "2b05b3ebf458ab5aa6df900d65b5273656c07a9dd8e21892c468400062cc4f4a"], ["reset_password_sent_at", "2017-09-15 02:35:58.178541"], ["updated_at", "2017-09-15 02:35:58.178885"], ["id", 2]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (2.7ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 19.8ms
+Completed 500 Internal Server Error in 536ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  
+app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb___453199791663509671_70246318589040'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:36:29 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-15 12:36:30 +1000
+Processing by MazesController#index as HTML
+  Rendering mazes/index.html.erb within layouts/application
+  Rendered mazes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-15 12:36:31 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
