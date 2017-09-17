@@ -93,12 +93,14 @@ class Maze {
 
   // get cell information from assigned classes
   getCell(x, y) {
-
+    return $(`#${x}-${y}`);
   }
 
   // set cell information using classes
-  setCell(x, y) {
-
+  setCell(x, y, val) {
+    c = $(`#${x}-${y}`)
+    c.removeClass('active checked');
+    c.addClass(val);
   }
 
   // div active = "currently in active set"
