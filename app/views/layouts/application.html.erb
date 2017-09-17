@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Pathfinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,19 +14,36 @@
   <body>
     <div class="container">
 
-      <nav>
-        <%= link_to "Home", root_path %>
 
-      <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-      <% else %>
-        <%= link_to('Login', new_user_session_path)  %>
-      <% end %>
+        <nav class="navbar navbar-inverse navbar navbar-fixed-top">
+          <%= link_to "Home", root_path %>
+          |
+          <%= link_to "Maze", new_maze_path %>
+        </nav>
 
-      </nav>
+      <div class="main">
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+
 
       <%= yield %>
+      </div>
+
     </div>
+
+    <aside>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+      <div class="sidebar"></div>
+    </aside>
 
   </body>
 </html>

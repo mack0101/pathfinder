@@ -1,6 +1,19 @@
 // Place all the styles related to the mazes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.navbar-inverse {
+	background: #2c3e50;
+  padding: 5px;
+}
+
+.main {
+  padding-top: 70px;
+}
 
 .maze {
   margin: 0 auto;
@@ -15,4 +28,30 @@ td {
   height: 30px;
   width: 30px;
   border: 1px solid black;
+}
+
+.container {
+  background: rgb(208, 213, 204);
+  order: 2;
+  flex: 3;
+  padding: 20px;
+}
+
+aside {
+  padding-top: 70px;
+  height: 800px;
+  flex: 1;
+  order: 1;
+  overflow: scroll;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 100px;
+  width: 70%;
+  border: 0.5px solid #ccc;
+  box-shadow: 10px 10px 5px #ccc;
 }
