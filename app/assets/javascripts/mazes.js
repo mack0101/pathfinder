@@ -6,20 +6,22 @@ class Maze {
     this.mark = 0;
     this.isMouseDown = false;
     this.invertMouse = false;
-  }
-
-  reset() {
-    this.mark = 0;
-    setStartMarker();
+    this.startPos = [];
+    this.endPos = [];
+    // setup for pathfinding
+    this.activeSet = [];
+    this.calculatedSet = [];
   }
 
   generateMaze() {
+    this.mark = 0;
     for (let i = 0; i < this.rows; i++) {
       $('.maze table').append('<tr>');
       for (let j = 0; j < this.rows; j++) {
         $('.maze table tr').last().append(`<td class="cell" id="${i}-${j}">`);
       }
     }
+    this.setStartMarker();
   }
 
   setStartMarker() {
@@ -27,6 +29,8 @@ class Maze {
       if (this.mark === 0) {
         $(e.target).addClass('origin');
         this.mark += 1;
+        this.startPos = e.target.id.split('-')
+        console.log('Start Position:', this.startPos);
       }
       this.setEndMarker();
     });
@@ -34,11 +38,14 @@ class Maze {
 
   setEndMarker() {
     $('.cell').on('click', (e) => {
-      if (this.mark === 1) {
-        $(e.target).addClass('destination');
+      let c = $(e.target);
+      if (this.mark === 1 && !c.hasClass('origin')) {
+        c.addClass('destination');
         this.mark += 1;
+        this.endPos = e.target.id.split('-')
+        console.log('End Position:', this.endPos);
+        this.drawBarrier();
       }
-      this.drawBarrier();
     });
   }
 
@@ -84,17 +91,41 @@ class Maze {
     });
   }
 
+  // get cell information from assigned classes
+  getCell(x, y) {
+
+  }
+
+  // set cell information using classes
+  setCell(x, y) {
+
+  }
+
+  // div active = "currently in active set"
+  // div checked = "currently in calculated set"
+  findPath() {
+    console.log('findPath() Method');
+  }
+
 
 }
 
 // move parts into class
 $(document).ready( function() {
-  let maze = new Maze(20, 20);
+  const maze = new Maze(20, 20);
   maze.generateMaze();
-  maze.setStartMarker();
 
   $(document).mouseup(function() {
     maze.isMouseDown = false;
     maze.invertMouse = false;
+  });
+
+  $('#reset').on('click', (e) => {
+    $('table').empty();
+    maze.generateMaze();
+  });
+
+  $('#findPath').on('click', (e) => {
+    maze.findPath();
   });
 });
